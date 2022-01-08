@@ -26,7 +26,7 @@ function Main() {
   return (
     <S.Main>
       <S.Header>
-        <Image src={'/Polygon15.png'} layout={'fill'} objectFit="cover" />
+        <Image src={'/Polygon8.png'} layout={'fill'} objectFit="cover" />
       </S.Header>
     </S.Main>
   )
