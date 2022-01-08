@@ -2,13 +2,13 @@ import { fb } from '@firebase/firebase.utils'
 
 import { useEffect, useState } from 'react'
 import { useSetRecoilState } from 'recoil'
-import authAtom from '@atoms/User'
+import userAtom from '@atoms/User'
 import router from 'next/router'
 import { authService, authUser } from '@firebase/clientApp'
 
 function useFirebaseLogin() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const setAuthUser = useSetRecoilState(authAtom)
+  const setAuthUser = useSetRecoilState(userAtom)
 
   const setUserInfo = async (email: string) => {
     // set email & nickname into recoil state

@@ -1,11 +1,11 @@
 import { useRecoilValue } from 'recoil'
-import authAtom from '@atoms/User'
+import userAtom from '@atoms/User'
 import * as S from './Main.style'
 import Link from 'next/link'
 import { authService, authUser } from '@firebase/clientApp'
 
 function Main() {
-  const user = useRecoilValue(authAtom)
+  const user = useRecoilValue(userAtom)
 
   const handleClickLogout = () => {
     authService.signOut(authUser)
