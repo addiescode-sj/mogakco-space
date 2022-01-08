@@ -1,21 +1,21 @@
-import Section from '../components/Section';
-import { Gap } from '../Product.style';
-import TextWithScrollEffect from '../components/TextWithEffect/TextWithEffect.Scroll';
-import { IphoneText } from './data/data';
+import Layout from '@components/Layout/Layout'
+import TextWithEffectScroll from '@components/TextWithEffect/TextWithEffect.Scroll'
+import { Gap } from '../Product.style'
+import { IphoneText } from './data/data'
 
 function IPhone() {
   return (
-    <Section>
-      {IphoneText.map(text => (
+    <Layout background="#333">
+      {IphoneText.map((text) => (
         <>
-          <TextWithScrollEffect size={'large'} weight={'bold'}>
+          <TextWithEffectScroll size={'lg'} weight={'bold'}>
             {text}
-          </TextWithScrollEffect>
+          </TextWithEffectScroll>
           <Gap gap={80} />
         </>
       ))}
-    </Section>
-  );
+    </Layout>
+  )
 }
 
-export default IPhone;
+export default IPhone
