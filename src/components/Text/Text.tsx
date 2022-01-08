@@ -1,21 +1,21 @@
-import React, { forwardRef, PropsWithChildren } from 'react';
-import styled, { css } from 'styled-components';
-import { onSmall } from 'styles/mediaQuery';
+import React, { forwardRef, PropsWithChildren } from 'react'
+import styled, { css } from 'styled-components'
+import { onSmall } from '@styles/mediaQuery'
 
 export interface TextProps {
-  size: 'medium' | 'small' | 'large' | 'highlighted' | 'hero';
-  weight: 'regular' | 'bold' | number;
-  activate: boolean;
-  children: React.ReactNode;
+  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  weight: 'regular' | 'bold' | number
+  activate: boolean
+  children: React.ReactNode
 }
 
 const textStyleProps = {
-  medium: '1.9rem',
-  small: '1.7rem',
-  large: '3.2rem',
-  highlighted: '2.4rem',
-  hero: '5.6rem',
-} as const;
+  xs: '1.2rem',
+  sm: '1.8rem',
+  md: '2.4rem',
+  lg: '3.6rem',
+  xl: '6rem',
+} as const
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>(function Text(
   { size, children, ...props }: PropsWithChildren<TextProps>,
@@ -25,13 +25,13 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>(function Text(
     <BodyText ref={ref} size={textStyleProps[size]} {...props}>
       {children}
     </BodyText>
-  );
-});
+  )
+})
 
 export const BodyText = styled.p<{
-  size: string;
-  weight: 'regular' | 'bold' | number;
-  activate: boolean;
+  size: string
+  weight: 'regular' | 'bold' | number
+  activate: boolean
 }>`
   width: 100%;
 
@@ -57,6 +57,6 @@ export const BodyText = styled.p<{
   ${onSmall} {
     line-height: 1.21875;
   }
-`;
+`
 
-export default Text;
+export default Text
