@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 import { COLORS } from '../../styles/palette'
 
-export const Main = styled.main`
-  margin-top: 4.4rem;
+export const Main = styled.main``
+
+export const Header = styled.header`
+  width: 100%;
+  height: 45rem;
+  position: relative;
 `
 
 export const LoginButton = styled.button`
   display: block;
   margin-top: 2rem;
-  background: ${COLORS.GREY_03};
+  background: ${COLORS.MGK_BLUE};
   color: #fff;
 `
 
