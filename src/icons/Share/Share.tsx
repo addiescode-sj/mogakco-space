@@ -12,7 +12,7 @@ const Share: React.FC<IconProps> = ({ width = 48, height = 48 }) => {
         aria-labelledby="shareAndroidIconTitle"
         stroke="#4F83F9"
         strokeLinecap="square"
-        fill="none"
+        fill={'#4F83F9'}
         color="#4F83F9"
       >
         <path d="m16 8-8 3 8-3zm0 8-8-3 8 3z" />

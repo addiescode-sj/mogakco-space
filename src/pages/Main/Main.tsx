@@ -1,9 +1,6 @@
-import { useRecoilValue } from 'recoil'
-import userAtom from '@atoms/User'
 import * as S from './Main.style'
-import Link from 'next/link'
-import HeaderImg from '@img/header.png'
 import Image from 'next/image'
+import Layout from '@components/Layout/Layout'
 
 function Main() {
   // const user = useRecoilValue(userAtom)
@@ -24,11 +21,12 @@ function Main() {
   //   )
 
   return (
-    <S.Main>
+    <Layout>
+      <S.Gradient />
       <S.Header>
         <Image src={'/Polygon8.png'} layout={'fill'} objectFit="cover" />
       </S.Header>
-    </S.Main>
+    </Layout>
   )
 }
 

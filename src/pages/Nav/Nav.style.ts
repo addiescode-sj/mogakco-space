@@ -21,6 +21,7 @@ export const NavWrapper = styled.div`
   max-width: 98rem;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   z-index: ${zIndexStyle.nav};
 `
