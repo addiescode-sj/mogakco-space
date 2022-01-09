@@ -5,7 +5,7 @@ import { zIndexStyle } from '@styles/zIndexStyle'
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: ${zIndexStyle.nav};

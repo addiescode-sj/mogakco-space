@@ -11,7 +11,6 @@ function App({ Component, pageProps }: AppProps) {
     <RecoilRoot>
       <GlobalStyle />
       <HolidayPortal />
-      <Nav />
       <Component {...pageProps} />
     </RecoilRoot>
   )

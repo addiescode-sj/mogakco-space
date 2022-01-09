@@ -1,6 +1,19 @@
-import { onSmall } from '@styles/mediaQuery'
+import { onLarge, onSmall } from '@styles/mediaQuery'
 import { zIndexStyle } from '@styles/zIndexStyle'
 import styled from 'styled-components'
+
+export const AboutMe = styled.section`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+
+  ${onLarge} {
+    padding: 0 12rem;
+  }
+`
 
 export const Gradient = styled.div`
   position: fixed;
@@ -19,9 +32,18 @@ export const Gradient = styled.div`
 
 export const Header = styled.header`
   width: 100%;
+  min-width: 100vw;
   height: 45rem;
   position: relative;
   ${onSmall} {
     height: 22.3rem;
   }
+`
+
+export const ProfileSection = styled.section`
+  width: 100%;
+  display: flex;
+  margin-top: 32.7rem;
+  max-width: 1000px;
+  gap: 4rem;
 `
