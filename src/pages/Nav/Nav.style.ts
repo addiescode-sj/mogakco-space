@@ -1,36 +1,59 @@
-import styled from 'styled-components'
 import { onSmall } from '@styles/mediaQuery'
+import { COLORS } from '@styles/palette'
+import { flexCenter } from '@styles/styleUtils'
 import { zIndexStyle } from '@styles/zIndexStyle'
+import styled from 'styled-components'
 
-export const NavContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const NavContainer = styled.nav`
+  position: absolute;
+  top: 0;
   width: 100%;
   z-index: ${zIndexStyle.nav};
-  background-color: rgb(0, 0, 0, 0.8);
-  white-space: nowrap;
-  height: 4.4rem;
-  color: #f5f5f7;
-  font-size: 1.2rem;
+  padding: 5.7rem 1.7rem;
 
   ${onSmall} {
-    height: 4.8rem;
-    justify-content: space-between;
+    padding: 2.8rem 0 0 1.7rem;
   }
+`
+
+export const NavWrapper = styled.div`
+  width: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: ${zIndexStyle.nav};
 `
 
 export const NavList = styled.ul`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 98rem;
-  list-style: none;
+  gap: 2.1rem;
+  z-index: ${zIndexStyle.nav};
+`
+
+export const NavItem = styled.li`
+  ${flexCenter};
 
   && {
-    padding: 0 1.5rem;
-    letter-spacing: 0.02em;
-    cursor: pointer;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.55;
+    z-index: ${zIndexStyle.nav};
   }
+  span {
+    margin-right: 0.7rem;
+  }
+`
+
+export const Badge = styled.div`
+  border-radius: 50%;
+  width: 3.4rem;
+  height: 3.4rem;
+  background: ${COLORS.MGK_BLUE};
+  text-align: center;
+  margin: auto 0;
+  z-index: ${zIndexStyle.nav};
 `
