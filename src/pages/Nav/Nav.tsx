@@ -1,4 +1,4 @@
-import { useScreenContext } from '@hooks/useScreentContext'
+import { useScreenContext } from '@hooks/useScreenContext'
 import Logo from '@icons/Logo'
 import Share from '@icons/Share'
 import * as S from './Nav.style'
