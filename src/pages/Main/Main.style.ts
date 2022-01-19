@@ -6,7 +6,7 @@ import { COLORS } from '../../styles/palette'
 export const Main = styled.main``
 
 export const Gradient = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 30rem;
