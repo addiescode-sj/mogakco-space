@@ -23,7 +23,7 @@ function AboutMe() {
       {!isSmall && <HeroCard />}
       <S.ProfileSection>
         {isSmall && <IntroMe />}
-        <S.ProfileTitle>About Me</S.ProfileTitle>
+        <S.SectionTitle>About Me</S.SectionTitle>
         <S.ProfileWarp>
           <ContactCard />
           <SkillsCard />

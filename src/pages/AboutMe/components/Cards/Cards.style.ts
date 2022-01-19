@@ -26,7 +26,7 @@ export const HeroCardInNavWrap = styled.div`
   top: 8.7rem;
   width: 100%;
   padding: 0 1.7rem;
-`;
+`
 
 export const IntroduceNameWarp = styled.div`
   margin-bottom: 9rem;
@@ -49,8 +49,11 @@ export const IntroduceDevelopWarp = styled.div`
   font-size: 1.8rem;
   line-height: 1.5;
   font-weight: bold;
+  word-break: keep-all;
+
   ${onSmall} {
-    margin-bottom: 4rem
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
   }
 `
 export const DevelopTitle = styled.p`
@@ -61,7 +64,7 @@ export const DevelopScr = styled.div`
   ${onSmall} {
     color: #205284;
   }
-`;
+`
 export const IntroduceGithubWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -82,7 +85,6 @@ export const AddImg = styled.img`
     position: absolute;
     bottom: -1.5rem;
     right: 18%;
-
   }
 `
 export const BtnGithub = styled.button`
@@ -106,7 +108,7 @@ export const BtnGithub = styled.button`
 
 export const ContactCardWrap = styled.div`
   flex: 27.5% 1 1;
-  height: 40rem;
+  min-height: 30rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -122,6 +124,21 @@ export const ContactTitle = styled.div`
   color: #205284;
   font-size: 3.2rem;
   font-weight: bold;
+
+  ${onSmall} {
+    font-size: 2.4rem;
+  }
+`
+
+export const SkillsTitle = styled.div`
+  color: #205284;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 4.8rem;
+
+  ${onSmall} {
+    font-size: 2.4rem;
+  }
 `
 export const ContentText = styled.p`
   margin-top: -1rem;
@@ -132,6 +149,9 @@ export const ContactContents = styled.div`
   display: flex;
   flex-direction: column;
   align-content: flex-end;
+  ${onSmall} {
+    font-size: 1.6rem;
+  }
 `
 export const ContentTitle = styled.p`
   color: #4f83f9;
@@ -144,7 +164,6 @@ export const InfoWrap = styled.div`
 
 export const SkillsCardWrap = styled.div`
   flex: 65.8% 1 1;
-  min-height: 40rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -165,10 +184,10 @@ export const DevelopmentSkillWarp = styled.ul`
 export const SkillListWrap = styled.ul`
   display: flex;
   list-style: none;
-`;
+`
 export const SkillListDot = styled.li`
   list-style: inside;
-`;
+`
 export const SkillListText = styled.li`
   list-style: none;
-`;
+`

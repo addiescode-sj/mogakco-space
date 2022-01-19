@@ -1,4 +1,5 @@
 import { onLarge, onSmall } from '@styles/mediaQuery'
+import { COLORS } from '@styles/palette'
 import { zIndexStyle } from '@styles/zIndexStyle'
 import styled from 'styled-components'
 
@@ -48,21 +49,31 @@ export const ProfileSection = styled.section`
   max-width: 1000px;
   flex-direction: column;
   ${onSmall} {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
-`;
+`
 
 export const ProfileWarp = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 3rem;
   gap: 4rem;
+
   ${onSmall} {
     flex-direction: column;
   }
 `
-export const ProfileTitle = styled.div`
+export const SectionTitle = styled.div`
   font-weight: bold;
   color: #205284;
   font-size: 3rem;
-  margin-bottom: 3rem;
-`;
+
+  span {
+    margin-left: 0.8rem;
+    color: ${COLORS.MGK_BLUE};
+  }
+
+  ${onSmall} {
+    font-size: 1.6rem;
+  }
+`

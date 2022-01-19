@@ -2,17 +2,29 @@ import { onSmall } from '@styles/mediaQuery'
 import { COLORS } from '@styles/palette'
 import styled from 'styled-components'
 
-export const Projects = styled.section`
-  display: flex;
-  flex-direction: column;
+export const ProjectsContainer = styled.section`
   width: 100%;
   max-width: 1000px;
   color: #333;
+  margin-top: 12.2rem;
+
+  ${onSmall} {
+    margin-top: 6.5rem;
+  }
+`
+
+export const Projects = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 8.4rem;
 
   h2 {
     font-weight: bold;
     color: ${COLORS.MGK_BLUE};
+  }
+
+  ${onSmall} {
+    gap: 5.3rem;
   }
 `
 
@@ -23,6 +35,9 @@ export const ProjectWrapper = styled.div`
 
   &:first-child {
     margin-top: 8.4rem;
+    ${onSmall} {
+      margin-top: 1.8rem;
+    }
   }
 
   &:last-child {
@@ -31,6 +46,7 @@ export const ProjectWrapper = styled.div`
 
   ${onSmall} {
     flex-direction: column;
+    justify-content: center;
   }
 `
 
@@ -46,6 +62,9 @@ export const Name = styled.h2`
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.4;
+  ${onSmall} {
+    font-size: 2.4rem;
+  }
 `
 
 export const DateAndSpec = styled.p`
@@ -68,10 +87,16 @@ export const DateAndSpec = styled.p`
 export const Text = styled.span`
   display: block;
   font-size: 2rem;
+  ${onSmall} {
+    font-size: 1.6rem;
+  }
 `
 
 export const Descriptions = styled.div`
   font-size: 2rem;
+  ${onSmall} {
+    font-size: 1.6rem;
+  }
 `
 
 export const ContentsWrapper = styled.div`
