@@ -46,5 +46,23 @@ export const ProfileSection = styled.section`
   display: flex;
   margin-top: 32.7rem;
   max-width: 1000px;
+  flex-direction: column;
+  ${onSmall} {
+    margin-top: 7rem;
+  }
+`;
+
+export const ProfileWarp = styled.div`
+  width: 100%;
+  display: flex;
   gap: 4rem;
+  ${onSmall} {
+    flex-direction: column;
+  }
 `
+export const ProfileTitle = styled.div`
+  font-weight: bold;
+  color: #205284;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+`;

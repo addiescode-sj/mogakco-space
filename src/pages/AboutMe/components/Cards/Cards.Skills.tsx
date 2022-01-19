@@ -23,17 +23,23 @@ function SkillsCard() {
 
                 <S.WorkSkilltWarp>
                     {workSkill.map((text, idx) => (
-                        <li key={idx}>
-                            {text}
-                        </li>
+                        <S.SkillListWrap>
+                            <S.SkillListDot></S.SkillListDot>
+                            <li key={idx}>
+                                {text}
+                            </li>
+                        </S.SkillListWrap>
                     ))}
                 </S.WorkSkilltWarp>
 
                 <S.DevelopmentSkillWarp>
                     {developmentSkill.map((text, idx) => (
-                        <li key={idx}>
-                            {text}
-                        </li>
+                        <S.SkillListWrap>
+                            <S.SkillListDot></S.SkillListDot>
+                            <li key={idx}>
+                                {text}
+                            </li>
+                        </S.SkillListWrap>
                     ))}
                 </S.DevelopmentSkillWarp>
             </S.ContactContents>
