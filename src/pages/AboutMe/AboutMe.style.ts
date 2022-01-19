@@ -37,6 +37,7 @@ export const Header = styled.header`
 
   ${onSmall} {
     height: 22.3rem;
+    width: calc(100% + 6rem);
   }
 `
 
