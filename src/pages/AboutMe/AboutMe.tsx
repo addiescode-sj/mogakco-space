@@ -4,7 +4,9 @@ import Image from 'next/image'
 import ContactCard from './components/Cards/Cards.Contact'
 import HeroCard from './components/Cards/Cards.Hero'
 import SkillsCard from './components/Cards/Cards.Skills'
+import IntroMe from './components/Cards/Cards.IntroMe'
 import Nav from '@pages/Nav'
+import Text from '../../components/Text/Text';
 import { useScreenContext } from '@hooks/useScreentContext'
 
 function AboutMe() {
@@ -20,8 +22,12 @@ function AboutMe() {
       </S.Header>
       {!isSmall && <HeroCard />}
       <S.ProfileSection>
-        <ContactCard />
-        <SkillsCard />
+          {isSmall && <IntroMe />}
+        <S.ProfileTitle>About Me</S.ProfileTitle>
+        <S.ProfileWarp>
+            <ContactCard />
+            <SkillsCard />
+        </S.ProfileWarp>
       </S.ProfileSection>
     </S.AboutMe>
   )

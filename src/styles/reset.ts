@@ -89,6 +89,9 @@ export const reset = css`
     font: inherit;
     vertical-align: baseline;
   }
+  * {
+    box-sizing: border-box;
+  }
 
   article,
   aside,

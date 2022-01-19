@@ -1,4 +1,4 @@
-import { onSmall } from '@styles/mediaQuery'
+import { onLarge, onSmall } from '@styles/mediaQuery'
 import styled from 'styled-components'
 
 export const HeroCardWarp = styled.div`
@@ -14,6 +14,20 @@ export const HeroCardWarp = styled.div`
   border-radius: 14px;
   box-sizing: border-box;
 `
+
+export const HeroCardInNavWrap = styled.div`
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  top: 8.7rem;
+  width: 100%;
+  padding: 0 1.7rem;
+`;
+
 export const IntroduceNameWarp = styled.div`
   margin-bottom: 9rem;
   font-size: 3.6rem;
@@ -22,28 +36,38 @@ export const IntroduceNameWarp = styled.div`
   color: #fff;
 
   ${onSmall} {
-    position: absolute;
-    top: 8.7rem;
-    z-index: 3;
+    margin-bottom: 0;
     font-size: 1.6rem;
     line-height: 1.2;
-    margin-left: 1.7rem;
   }
 `
 export const DeveloperName = styled.span`
   color: #91fccf;
 `
 export const IntroduceDevelopWarp = styled.div`
+  color: white;
   font-size: 1.8rem;
   line-height: 1.5;
   font-weight: bold;
+  ${onSmall} {
+    margin-bottom: 4rem
+  }
 `
 export const DevelopTitle = styled.p`
   color: #4f83f9;
 `
+export const DevelopScr = styled.div`
+  color: white;
+  ${onSmall} {
+    color: #205284;
+  }
+`;
 export const IntroduceGithubWrap = styled.div`
   display: flex;
   flex-direction: column;
+  ${onSmall} {
+    position: relative;
+  }
 `
 export const AddImg = styled.img`
   width: 22.3rem;
@@ -51,6 +75,15 @@ export const AddImg = styled.img`
   border-radius: 100%;
   background-color: pink;
   margin-bottom: 5rem;
+  ${onSmall} {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 0rem;
+    position: absolute;
+    bottom: -1.5rem;
+    right: 18%;
+
+  }
 `
 export const BtnGithub = styled.button`
   height: 6rem;
@@ -62,6 +95,13 @@ export const BtnGithub = styled.button`
   font-size: 2.4rem;
   font-weight: bold;
   border: 0;
+  cursor: pointer;
+  ${onSmall} {
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    z-index: 4;
+  }
 `
 
 export const ContactCardWrap = styled.div`
@@ -71,7 +111,6 @@ export const ContactCardWrap = styled.div`
   justify-content: space-between;
   flex-direction: column;
   padding: 2.6rem 2rem;
-  box-sizing: border-box;
   border: 1px solid #c6d0eb;
   border-radius: 2rem;
   box-shadow: 0px 10px 29px rgba(198, 208, 235, 0.5);
@@ -110,19 +149,26 @@ export const SkillsCardWrap = styled.div`
   justify-content: space-between;
   flex-direction: column;
   padding: 2.6rem 2rem;
-  box-sizing: border-box;
   border: 1px solid #c6d0eb;
   border-radius: 2rem;
   box-shadow: 0px 10px 29px rgba(198, 208, 235, 0.5);
   background-color: #fff;
   color: #205284;
 `
-export const WorkSkilltWarp = styled.ul`
-  list-style: inside;
+export const WorkSkilltWarp = styled.div`
   margin-bottom: 4rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
 `
 export const DevelopmentSkillWarp = styled.ul`
-  list-style: inside;
-  margin-left: 1rem;
+  margin-left: 2rem;
 `
+export const SkillListWrap = styled.ul`
+  display: flex;
+  list-style: none;
+`;
+export const SkillListDot = styled.li`
+  list-style: inside;
+`;
+export const SkillListText = styled.li`
+  list-style: none;
+`;
