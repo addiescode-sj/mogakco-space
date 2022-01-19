@@ -16,7 +16,7 @@ export const AboutMe = styled.section`
 `
 
 export const Gradient = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 30rem;
