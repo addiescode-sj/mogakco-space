@@ -6,8 +6,8 @@ import HeroCard from './components/Cards/Cards.Hero'
 import SkillsCard from './components/Cards/Cards.Skills'
 import IntroMe from './components/Cards/Cards.IntroMe'
 import Nav from '@pages/Nav'
-import Text from '../../components/Text/Text';
-import { useScreenContext } from '@hooks/useScreentContext'
+import { useScreenContext } from '@hooks/useScreenContext'
+import Projects from './Projects'
 
 function AboutMe() {
   const { isSmall } = useScreenContext()
@@ -22,13 +22,14 @@ function AboutMe() {
       </S.Header>
       {!isSmall && <HeroCard />}
       <S.ProfileSection>
-          {isSmall && <IntroMe />}
+        {isSmall && <IntroMe />}
         <S.ProfileTitle>About Me</S.ProfileTitle>
         <S.ProfileWarp>
-            <ContactCard />
-            <SkillsCard />
+          <ContactCard />
+          <SkillsCard />
         </S.ProfileWarp>
       </S.ProfileSection>
+      <Projects />
     </S.AboutMe>
   )
 }

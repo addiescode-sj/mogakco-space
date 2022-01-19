@@ -4,7 +4,7 @@ import React from 'react'
 import { RecoilRoot } from 'recoil'
 import HolidayPortal from '@pages/Portals/HolidayPortal'
 import Nav from '@pages/Nav'
-import { withScreenContext } from '@hooks/useScreentContext'
+import { withScreenContext } from '@hooks/useScreenContext'
 
 function App({ Component, pageProps }: AppProps) {
   return (

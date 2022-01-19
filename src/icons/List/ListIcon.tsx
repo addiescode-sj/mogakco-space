@@ -1,4 +1,4 @@
-import { useScreenContext } from '@hooks/useScreentContext'
+import { useScreenContext } from '@hooks/useScreenContext'
 import React from 'react'
 import { touchAreaStyle } from '@styles/touchAreaStyle'
 import IconWrapper, { IconProps } from '../IconWrapper'
