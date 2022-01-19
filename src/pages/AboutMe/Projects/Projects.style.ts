@@ -1,3 +1,4 @@
+import { onSmall } from '@styles/mediaQuery'
 import { COLORS } from '@styles/palette'
 import styled from 'styled-components'
 
@@ -27,10 +28,18 @@ export const ProjectWrapper = styled.div`
   &:last-child {
     margin-bottom: 9.6rem;
   }
+
+  ${onSmall} {
+    flex-direction: column;
+  }
 `
 
 export const TitleSection = styled.div`
   flex-basis: 30rem;
+  ${onSmall} {
+    flex-basis: 0;
+    margin-bottom: 4.2rem;
+  }
 `
 
 export const Name = styled.h2`
