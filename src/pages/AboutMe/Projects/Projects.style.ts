@@ -116,5 +116,7 @@ export const DescTitles = styled.h2`
 `
 
 export const Content = styled.ul`
-  list-style: inside;
+  word-break: keep-all;
+  list-style: initial;
+  margin-left: 3rem;
 `
