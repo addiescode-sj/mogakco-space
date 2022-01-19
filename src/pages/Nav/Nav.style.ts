@@ -7,7 +7,8 @@ import styled from 'styled-components'
 export const NavContainer = styled.nav`
   position: absolute;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: ${zIndexStyle.nav};
   padding: 5.7rem 1.7rem;
 

@@ -31,10 +31,10 @@ export const Gradient = styled.div`
 `
 
 export const Header = styled.header`
-  width: 100%;
-  min-width: 100vw;
+  width: calc(100% + 24rem);
   height: 45rem;
   position: relative;
+
   ${onSmall} {
     height: 22.3rem;
   }

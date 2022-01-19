@@ -16,7 +16,7 @@ function AboutMe() {
       <S.Header>
         <Nav />
         {isSmall && <HeroCard />}
-        <Image src={'/Polygon15.png'} layout={'fill'} objectFit="cover" />
+        <Image src={'/Polygon15.png'} layout={'fill'} objectFit="cover" sizes="100%" />
       </S.Header>
       {!isSmall && <HeroCard />}
       <S.ProfileSection>
