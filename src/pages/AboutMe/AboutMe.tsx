@@ -2,12 +2,12 @@ import React from 'react'
 import * as S from './AboutMe.style'
 import Image from 'next/image'
 import ContactCard from './components/Cards/Cards.Contact'
-import HeroCard from './components/Cards/Cards.Hero'
 import SkillsCard from './components/Cards/Cards.Skills'
 import IntroMe from './components/Cards/Cards.IntroMe'
 import Nav from '@pages/Nav'
 import { useScreenContext } from '@hooks/useScreenContext'
 import Projects from './Projects'
+import HeroCard from '@components/HeroCard'
 
 function AboutMe() {
   const { isSmall } = useScreenContext()
