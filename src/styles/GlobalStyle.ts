@@ -31,7 +31,7 @@ html {
 
   /* default text style */
   body {
-    font-family: 'Roboto', ${baseFont}
+    font-family: 'Roboto', ${baseFont};
     line-height: 1.4;
   }
 `
