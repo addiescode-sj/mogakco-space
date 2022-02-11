@@ -19,6 +19,17 @@ export const Gradient = styled.div`
     bottom: 0;
   }
 `
+export const Chatter = styled.p`
+  position: absolute;
+  top: 16rem;
+  width: 100%;
+  z-index: ${zIndexStyle.nav - 1};
+  font-weight: 700;
+  color: white;
+  font-size: 6rem;
+  line-height: 1.2;
+  text-align: center;
+`
 
 export const Header = styled.header`
   width: 100%;
