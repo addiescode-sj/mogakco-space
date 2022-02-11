@@ -16,8 +16,8 @@ function Main() {
   if (uId)
     return (
       <Layout>
-        <S.Gradient />
         <S.Header>
+          <S.Gradient />
           <Nav />
           <S.Chatter>
             Good {chatteringTime}!<br /> I am {name}.

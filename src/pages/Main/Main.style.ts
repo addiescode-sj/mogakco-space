@@ -31,6 +31,13 @@ export const Chatter = styled.p`
   text-align: center;
   animation: toUpper 1.4s ease-in;
 
+  ${onSmall} {
+    top: 8.7rem;
+    font-size: 2.8rem;
+    text-align: left;
+    padding: 0 1.7rem;
+  }
+
   @keyframes toUpper {
     0% {
       opacity: 0;

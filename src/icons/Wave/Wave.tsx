@@ -1,3 +1,5 @@
+import { onSmall } from '@styles/mediaQuery'
+import { zIndexStyle } from '@styles/zIndexStyle'
 import React from 'react'
 import styled from 'styled-components'
 import { IconProps } from '../IconWrapper'
@@ -33,9 +35,13 @@ const Wave: React.FC<IconProps> = () => {
 const WaveContainer = styled.div`
   position: absolute;
   width: 100%;
-  bottom: -4.6rem;
-  height: 20vh;
+  bottom: 0;
   text-align: center;
+  z-index: ${zIndexStyle.nav};
+
+  ${onSmall} {
+    top: calc(100% - 4rem + 2px);
+  }
 `
 
 const WaveWrapper = styled.svg`
@@ -64,6 +70,7 @@ const WaveWrapper = styled.svg`
     animation-delay: -5s;
     animation-duration: 20s;
   }
+
   @keyframes move-forever {
     0% {
       transform: translate3d(-90px, 0, 0);
@@ -72,18 +79,10 @@ const WaveWrapper = styled.svg`
       transform: translate3d(85px, 0, 0);
     }
   }
-  /*Shrinking for mobile*/
-  @media (max-width: 768px) {
-    .waves {
-      height: 40px;
-      min-height: 40px;
-    }
-    .content {
-      height: 30vh;
-    }
-    h1 {
-      font-size: 24px;
-    }
+
+  ${onSmall} {
+    height: 4rem;
+    min-height: 4rem;
   }
 `
 
