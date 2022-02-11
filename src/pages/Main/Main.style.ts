@@ -29,12 +29,24 @@ export const Chatter = styled.p`
   font-size: 6rem;
   line-height: 1.2;
   text-align: center;
+  animation: toUpper 1.4s ease-in;
+
+  @keyframes toUpper {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `
 
 export const Header = styled.header`
+  position: relative;
   width: 100%;
   height: 45rem;
-  position: relative;
   ${onSmall} {
     height: 22.3rem;
   }

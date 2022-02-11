@@ -1,9 +1,10 @@
 import * as S from './Main.style'
-import Image from 'next/image'
 import Layout from '@components/Layout/Layout'
 import { useRouter } from 'next/router'
 import dayjs, { Dayjs } from 'dayjs'
 import Nav from '@pages/Nav'
+import Wave from '@icons/Wave'
+import Image from 'next/image'
 
 function Main() {
   const router = useRouter()
@@ -22,6 +23,7 @@ function Main() {
             Good {chatteringTime}!<br /> I am {name}.
           </S.Chatter>
           <Image src={'/Polygon8.png'} layout={'fill'} objectFit="cover" />
+          <Wave />
         </S.Header>
         <S.HomeSection></S.HomeSection>
       </Layout>
