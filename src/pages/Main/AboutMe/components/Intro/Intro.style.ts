@@ -1,3 +1,4 @@
+import { onSmall } from '@styles/mediaQuery'
 import { COLORS } from '@styles/palette'
 import styled from 'styled-components'
 
@@ -16,6 +17,10 @@ export const TitleText = styled.h2`
 
   em {
     color: ${COLORS.MGK_BLUE};
+  }
+
+  ${onSmall} {
+    font-size: 1.6rem;
   }
 `
 
