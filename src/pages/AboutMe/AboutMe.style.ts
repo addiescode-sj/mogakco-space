@@ -1,5 +1,4 @@
 import { onLarge, onSmall } from '@styles/mediaQuery'
-import { COLORS } from '@styles/palette'
 import { zIndexStyle } from '@styles/zIndexStyle'
 import styled from 'styled-components'
 
@@ -61,19 +60,5 @@ export const ProfileWarp = styled.div`
 
   ${onSmall} {
     flex-direction: column;
-  }
-`
-export const SectionTitle = styled.div`
-  font-weight: bold;
-  color: #205284;
-  font-size: 3rem;
-
-  span {
-    margin-left: 0.8rem;
-    color: ${COLORS.MGK_BLUE};
-  }
-
-  ${onSmall} {
-    font-size: 1.6rem;
   }
 `

@@ -66,8 +66,13 @@ export const LoginButton = styled.button`
   color: #fff;
 `
 
-export const HomeSection = styled.section`
+export const Body = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 15.6rem 22rem 27.3rem;
+
+  ${onSmall} {
+    padding: 1.5rem;
+  }
 `

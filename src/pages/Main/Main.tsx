@@ -5,6 +5,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import Nav from '@pages/Nav'
 import Wave from '@icons/Wave'
 import Image from 'next/image'
+import AboutMe from './AboutMe/AboutMe'
 
 function Main() {
   const router = useRouter()
@@ -25,7 +26,9 @@ function Main() {
           <Image src={'/Polygon8.png'} layout={'fill'} objectFit="cover" />
           <Wave />
         </S.Header>
-        <S.HomeSection></S.HomeSection>
+        <S.Body>
+          <AboutMe />
+        </S.Body>
       </Layout>
     )
 
