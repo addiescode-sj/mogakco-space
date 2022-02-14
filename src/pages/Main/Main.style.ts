@@ -73,6 +73,6 @@ export const Body = styled.section`
   padding: 15.6rem 22rem 27.3rem;
 
   ${onSmall} {
-    padding: 1.5rem;
+    padding: 4.4rem 2.4rem 4.8rem;
   }
 `
