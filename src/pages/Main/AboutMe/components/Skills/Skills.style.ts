@@ -18,13 +18,13 @@ export const Skills = styled.div`
   }
 `
 
-export const SkillsTitle = styled.h2`
+export const SkillsTitle = styled.p`
   display: flex;
   justify-content: flex-start;
   align-items: center;
 `
 
-export const TitleText = styled.h2`
+export const TitleText = styled.span`
   color: ${COLORS.DK_BLUE};
   font-size: 3.6rem;
   font-weight: 700;
@@ -33,7 +33,7 @@ export const TitleText = styled.h2`
   }
 `
 
-export const SkillsStage = styled.h4`
+export const SkillsStage = styled.span`
   align-self: flex-end;
   margin: auto 0 0.7rem 0.7rem;
   font-size: 1.2rem;
@@ -41,7 +41,7 @@ export const SkillsStage = styled.h4`
   color: ${COLORS.LT_GRAY};
 `
 
-export const SkillsStatus = styled.h5`
+export const SkillsStatus = styled.p`
   margin-top: 1.7rem;
   text-transform: uppercase;
   color: ${COLORS.LT_GRAY};

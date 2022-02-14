@@ -17,7 +17,7 @@ function Intro() {
           design, code, and optimize web services.
         </S.BodyText>
       )}
-      <S.BodyText className="click">
+      <S.BodyText className="click-text">
         Get to know me in more detail? <em>Click</em>
       </S.BodyText>
     </S.Intro>

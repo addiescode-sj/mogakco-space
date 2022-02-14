@@ -40,7 +40,7 @@ export const BodyText = styled.p`
   line-height: 1.5;
   word-break: keep-all;
 
-  &.click {
+  .click-text {
     margin-top: auto;
     font-weight: 400;
   }
