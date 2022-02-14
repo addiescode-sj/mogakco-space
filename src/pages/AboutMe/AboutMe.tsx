@@ -6,7 +6,7 @@ import SkillsCard from './components/Cards/Cards.Skills'
 import IntroMe from './components/Cards/Cards.IntroMe'
 import Nav from '@pages/Nav'
 import { useScreenContext } from '@hooks/useScreenContext'
-import Projects from './Projects'
+import Projects from '../Projects'
 import HeroCard from '@components/HeroCard'
 import { SectionTitle } from '@components/SectionTitle/SectionTitle.style'
 

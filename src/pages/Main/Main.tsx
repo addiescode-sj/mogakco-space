@@ -6,6 +6,7 @@ import Nav from '@pages/Nav'
 import Wave from '@icons/Wave'
 import Image from 'next/image'
 import AboutMe from './AboutMe/AboutMe'
+import Projects from './Projects'
 
 function Main() {
   const router = useRouter()
@@ -28,6 +29,7 @@ function Main() {
         </S.Header>
         <S.Body>
           <AboutMe />
+          <Projects />
         </S.Body>
       </Layout>
     )
@@ -42,11 +44,11 @@ const timeFormatter = (time: Dayjs) => {
     return 'Morning'
   }
 
-  if (twoDigitsTime >= '11' && twoDigitsTime < '16') {
+  if (twoDigitsTime >= '11' && twoDigitsTime < '18') {
     return 'Afternoon'
   }
 
-  if (twoDigitsTime >= '16' && twoDigitsTime < '23') {
+  if (twoDigitsTime >= '18' && twoDigitsTime < '23') {
     return 'Evening'
   }
 }

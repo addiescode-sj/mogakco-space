@@ -1,11 +1,13 @@
 import React from 'react'
-import * as S from './SectionTitle.style'
 import { SectionTitleProps } from './types'
 
-function SectionTitle({ title }: SectionTitleProps) {
+import * as S from './SectionTitle.style'
+
+function SectionTitle({ title, number }: SectionTitleProps) {
   return (
     <S.SectionTitle>
       <S.Title>{title}</S.Title>
+      <S.Number>{number}</S.Number>
     </S.SectionTitle>
   )
 }
