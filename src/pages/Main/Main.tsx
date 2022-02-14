@@ -36,15 +36,17 @@ function Main() {
 }
 
 const timeFormatter = (time: Dayjs) => {
-  if (time.isBefore('1', 'h')) {
+  const twoDigitsTime = dayjs(time).format('HH')
+
+  if (twoDigitsTime < '11') {
     return 'Morning'
   }
 
-  if (time.isAfter('1', 'h')) {
+  if (twoDigitsTime >= '11' && twoDigitsTime < '16') {
     return 'Afternoon'
   }
 
-  if (time.isAfter('7', 'h')) {
+  if (twoDigitsTime >= '16' && twoDigitsTime < '23') {
     return 'Evening'
   }
 }
