@@ -30,9 +30,7 @@ export const Button = styled.button`
   top: 50%;
   width: 5.7rem;
   height: 10.3rem;
-  border: 0;
   border-radius: 20px;
-  background: none;
 
   ${onSmall} {
     display: none;

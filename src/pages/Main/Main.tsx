@@ -7,6 +7,7 @@ import Wave from '@icons/Wave'
 import Image from 'next/image'
 import AboutMe from './AboutMe/AboutMe'
 import Projects from './Projects'
+import Github from '@pages/Github'
 
 function Main() {
   const router = useRouter()
@@ -30,6 +31,7 @@ function Main() {
         <S.Body>
           <AboutMe />
           <Projects />
+          <Github />
         </S.Body>
       </Layout>
     )

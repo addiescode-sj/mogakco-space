@@ -41,9 +41,6 @@ export const Badges = styled.div`
 `
 
 export const ProjectDetail = styled.button`
-  padding: 0;
-  border: 0;
-  background: none;
   cursor: pointer;
   align-self: flex-end;
   margin-top: auto;
