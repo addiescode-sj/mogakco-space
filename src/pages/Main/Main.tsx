@@ -8,6 +8,7 @@ import Image from 'next/image'
 import AboutMe from './AboutMe/AboutMe'
 import Projects from './Projects'
 import Github from '@pages/Github'
+import Footer from '@components/Footer'
 
 function Main() {
   const router = useRouter()
@@ -31,8 +32,10 @@ function Main() {
         <S.Body>
           <AboutMe />
           <Projects />
-          <Github />
         </S.Body>
+        <Footer>
+          <Github />
+        </Footer>
       </Layout>
     )
 

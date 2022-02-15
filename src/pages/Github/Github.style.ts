@@ -3,12 +3,15 @@ import { zIndexStyle } from '@styles/zIndexStyle'
 import styled from 'styled-components'
 
 export const GithubContainer = styled.div`
-  margin-top: 11rem;
+  position: absolute;
+  bottom: 27.3rem;
+  z-index: ${zIndexStyle.base};
+  padding: 11rem 22rem 0;
   width: 100%;
-  height: 100%;
 
   ${onSmall} {
-    margin-top: 4rem;
+    bottom: 11.3rem;
+    padding: 4rem 2.4rem 0;
   }
 `
 
@@ -58,8 +61,8 @@ export const GithubExplore = styled.button`
   ${onSmall} {
     font-size: 1.6rem;
     position: absolute;
-    top: 4rem;
-    right: 8rem;
+    top: 1.6rem;
+    right: 1.9rem;
   }
 `
 
@@ -84,6 +87,8 @@ export const GithubBackground = styled.div`
   background-position: cover;
 
   ${onSmall} {
+    width: 100%;
     min-height: 22.3rem;
+    padding: 1.6rem 2rem;
   }
 `
