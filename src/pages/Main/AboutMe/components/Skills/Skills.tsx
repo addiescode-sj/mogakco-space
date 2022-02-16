@@ -27,12 +27,14 @@ function Skills() {
         disableOnInteraction: false,
       }}
     >
-      {skillSet.map(({ skill, expertLevel }) => (
+      {skillSet.map(({ skill, expertLevel }, idx) => (
         <SwiperSlide>
           <S.Skills>
             <S.SkillsTitle>
               <S.TitleText>Skills</S.TitleText>
-              <S.SkillsStage>{}</S.SkillsStage>
+              <S.SkillsStage>
+                {idx + 1} / {skillSet.length}
+              </S.SkillsStage>
             </S.SkillsTitle>
             <S.SkillsStatus>{expertLevel}</S.SkillsStatus>
             <S.SkillsLogo>
