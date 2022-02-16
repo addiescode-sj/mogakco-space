@@ -45,7 +45,7 @@ function Main() {
 const timeFormatter = (time: Dayjs) => {
   const twoDigitsTime = dayjs(time).format('HH')
 
-  if (twoDigitsTime < '11') {
+  if (twoDigitsTime >= '0' && twoDigitsTime < '11') {
     return 'Morning'
   }
 
@@ -53,7 +53,7 @@ const timeFormatter = (time: Dayjs) => {
     return 'Afternoon'
   }
 
-  if (twoDigitsTime >= '18' && twoDigitsTime < '23') {
+  if (twoDigitsTime >= '18' && twoDigitsTime < '24') {
     return 'Evening'
   }
 }
