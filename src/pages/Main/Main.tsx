@@ -9,7 +9,9 @@ import AboutMe from './AboutMe/AboutMe'
 import Projects from './Projects'
 import Github from '@pages/Github'
 import Footer from '@components/Footer'
-import { githubLink } from './data/data'
+import { useRecoilValue } from 'recoil'
+import userAtom from '@atoms/User'
+import useMainInitialLoad from './hooks/useMainData'
 
 function Main() {
   const router = useRouter()
@@ -18,7 +20,11 @@ function Main() {
   const chatteringTime = timeFormatter(dayjs())
   const name = uId ? uId[0].toUpperCase() + uId.slice(1) : ''
 
-  if (uId)
+  const { githubProfile } = useRecoilValue(userAtom)
+
+  useMainInitialLoad()
+
+  if (uId && githubProfile)
     return (
       <Layout>
         <S.Header>
@@ -35,7 +41,7 @@ function Main() {
           <Projects />
         </S.Body>
         <Footer>
-          <Github githubLink={githubLink} />
+          <Github githubLink={githubProfile} />
         </Footer>
       </Layout>
     )

@@ -1,21 +1,17 @@
 import projectAtom from '@atoms/Projects'
 import SlidePrev from '@icons/SlidePrev'
-import React, { useEffect, useState } from 'react'
-import { useSetRecoilState } from 'recoil'
+import React, { useState } from 'react'
+import { useRecoilValue } from 'recoil'
 import SwiperClass from 'swiper'
 import { SwiperSlide } from 'swiper/react'
-import { projectInfo } from '../data/data'
 import SectionWithCards from '../templates/SectionwithCards'
 import ProjectCard from './components/ProjectCard'
 import * as S from './Projects.style'
 
 function Projects() {
   const [slider, setSlider] = useState<SwiperClass>()
-  const setProjectList = useSetRecoilState(projectAtom)
 
-  useEffect(() => {
-    setProjectList(projectInfo)
-  }, [])
+  const projectList = useRecoilValue(projectAtom)
 
   return (
     <S.ProjectsContainer>
@@ -25,9 +21,9 @@ function Projects() {
       <S.NextButton onClick={() => slider?.slideNext()}>
         <SlidePrev />
       </S.NextButton>
-      <SectionWithCards title="Projects" number={projectInfo.length} gap={'8.5rem'}>
+      <SectionWithCards title="Projects" number={projectList.length} gap={'8.5rem'}>
         <S.Projects slidesPerView={'auto'} spaceBetween={20} onSwiper={setSlider}>
-          {projectInfo.map((data, idx) => (
+          {projectList.map((data, idx) => (
             <SwiperSlide>
               <ProjectCard key={idx} item={data} />
             </SwiperSlide>

@@ -1,1 +1,1 @@
-export { skillSet } from './data'
+export * from './data'

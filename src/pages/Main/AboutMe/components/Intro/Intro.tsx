@@ -1,6 +1,10 @@
 import { useScreenContext } from '@hooks/useScreenContext'
-import React from 'react'
+import React, { useEffect } from 'react'
 import * as S from './Intro.style'
+import Link from 'next/link'
+import { linkedInLink } from '@pages/Main/data'
+import { useSetRecoilState } from 'recoil'
+import userAtom from '@atoms/User'
 
 function Intro() {
   const { isSmall } = useScreenContext()
@@ -18,7 +22,12 @@ function Intro() {
         </S.BodyText>
       )}
       <S.BodyText className="click-text">
-        Get to know me in more detail? <em>Click</em>
+        Get to know me in more detail?{' '}
+        <Link href={linkedInLink} passHref>
+          <a target="_blank">
+            <em>Click</em>
+          </a>
+        </Link>
       </S.BodyText>
     </S.Intro>
   )

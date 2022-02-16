@@ -22,7 +22,7 @@ export const skillSet: SkillSet = [
   { skill: SKILLS.HTML_AND_CSS, expertLevel: 'VERY GOOD' },
 ]
 
-export const projectInfo: Project[] = [
+export const projectList: Project[] = [
   {
     title: 'Mogakco Space',
     date: '2022.1~',
@@ -46,3 +46,4 @@ export const projectInfo: Project[] = [
 ]
 
 export const githubLink = 'https://github.com/addiescode-sj'
+export const linkedInLink = 'https://www.linkedin.com/in/sunjoo-lee-9b30a5163/'
