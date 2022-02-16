@@ -22,7 +22,7 @@ export const Skills = styled.div`
   flex-direction: column;
 
   ${onSmall} {
-    padding: 3.6rem 3.6rem 3.9rem;
+    padding: 3.6rem 2.5rem 3.9rem;
   }
 `
 
@@ -71,8 +71,10 @@ export const SkillsLogo = styled.div`
   ${onSmall} {
     margin-top: 0;
     position: absolute;
-    top: 1.5rem;
+    top: 3.6rem;
     right: 2.5rem;
+    width: 8.6rem;
+    height: 8.6rem;
   }
 `
 
