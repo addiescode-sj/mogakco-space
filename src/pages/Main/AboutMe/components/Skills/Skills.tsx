@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import * as S from './Skills.style'
 import Image from 'next/image'
-import Next from '@icons/Next'
 import { skillSet } from '@pages/Main/data'
-import SwiperClass, { Autoplay } from 'swiper'
+import { Autoplay } from 'swiper'
 import { SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { SKILLS } from '@pages/Main/models'
+import { SKILLS } from '@atoms/Skills/model'
+import { useSetRecoilState } from 'recoil'
+import skillsAtom from '@atoms/Skills'
 
 function Skills() {
+  const setSkills = useSetRecoilState(skillsAtom)
+
+  useEffect(() => {
+    setSkills(skillSet)
+  }, [])
+
   const skillsLogoMapper = {
     [SKILLS.REACT]: '/react-skills-logo.png',
     [SKILLS.TYPESCRIPT]: '/typescript-skills-logo.png',

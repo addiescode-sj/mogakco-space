@@ -2,13 +2,14 @@ import * as S from './Main.style'
 import Layout from '@components/Layout/Layout'
 import { useRouter } from 'next/router'
 import dayjs, { Dayjs } from 'dayjs'
-import Nav from '@pages/Nav'
+import Nav from '@components/Nav'
 import Wave from '@icons/Wave'
 import Image from 'next/image'
 import AboutMe from './AboutMe/AboutMe'
 import Projects from './Projects'
 import Github from '@pages/Github'
 import Footer from '@components/Footer'
+import { githubLink } from './data/data'
 
 function Main() {
   const router = useRouter()
@@ -34,7 +35,7 @@ function Main() {
           <Projects />
         </S.Body>
         <Footer>
-          <Github />
+          <Github githubLink={githubLink} />
         </Footer>
       </Layout>
     )

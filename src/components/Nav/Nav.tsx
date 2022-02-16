@@ -1,9 +1,15 @@
+import projectAtom from '@atoms/Projects'
+import skillsAtom from '@atoms/Skills'
 import { useScreenContext } from '@hooks/useScreenContext'
 import Logo from '@icons/Logo'
 import Share from '@icons/Share'
+import { useRecoilValue } from 'recoil'
 import * as S from './Nav.style'
+
 function Nav() {
   const { isSmall } = useScreenContext()
+  const projectList = useRecoilValue(projectAtom)
+  const skills = useRecoilValue(skillsAtom)
 
   if (isSmall)
     return (
@@ -21,11 +27,11 @@ function Nav() {
         <S.NavList>
           <S.NavItem>
             <span>Skills</span>
-            <S.Badge>3</S.Badge>
+            <S.Badge>{skills.length}</S.Badge>
           </S.NavItem>
           <S.NavItem>
             <span>Projects</span>
-            <S.Badge>3</S.Badge>
+            <S.Badge>{projectList.length}</S.Badge>
           </S.NavItem>
           <Share />
         </S.NavList>

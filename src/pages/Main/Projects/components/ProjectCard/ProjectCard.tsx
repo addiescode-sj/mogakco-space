@@ -1,17 +1,17 @@
+import { Project } from '@atoms/Projects/model'
 import React from 'react'
-import { ProjectInfo } from '../../type'
 import * as S from './ProjectCard.style'
 
 interface Props {
-  item: ProjectInfo
+  item: Project
 }
 
 function ProjectCard({ item }: Props) {
-  const { date, description, name, skills } = item
+  const { date, description, title, skills } = item
 
   return (
     <S.ProjectCard>
-      <S.ProjectTitle>{name}</S.ProjectTitle>
+      <S.ProjectTitle>{title}</S.ProjectTitle>
       <S.ProjectDate>{date}</S.ProjectDate>
       <S.ProjectDesc>{description}</S.ProjectDesc>
       <S.Badges>{skills}</S.Badges>

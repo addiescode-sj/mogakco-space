@@ -1,7 +1,13 @@
+import router from 'next/router'
 import React from 'react'
 import * as S from './Github.style'
+import Link from 'next/link'
 
-function Github() {
+interface Props {
+  githubLink: string
+}
+
+function Github({ githubLink }: Props) {
   return (
     <S.GithubContainer>
       <S.GithubBackground>
@@ -12,7 +18,11 @@ function Github() {
               addiescode-sj
               <span>Front-end Developer, UX engineer</span>
             </S.GithubIntro>
-            <S.GithubExplore>Explore</S.GithubExplore>
+            <Link href={githubLink} passHref>
+              <a target="_blank">
+                <S.GithubExplore>Explore</S.GithubExplore>
+              </a>
+            </Link>
           </S.GithubBannerBox>
         </S.GithubInfo>
       </S.GithubBackground>
