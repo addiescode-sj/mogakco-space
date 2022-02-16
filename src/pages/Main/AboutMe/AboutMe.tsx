@@ -1,5 +1,4 @@
 import React from 'react'
-import * as S from './AboutMe.style'
 import Intro from './components/Intro'
 import Skills from './components/Skills'
 import SectionWithCards from '../templates/SectionwithCards'

@@ -1,6 +1,6 @@
-import { onLarge, onSmall } from '@styles/mediaQuery'
+import { onSmall } from '@styles/mediaQuery'
 import { zIndexStyle } from '@styles/zIndexStyle'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Swiper } from 'swiper/react'
 import 'swiper/css'
 

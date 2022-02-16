@@ -2,16 +2,24 @@ import { onSmall } from '@styles/mediaQuery'
 import { COLORS } from '@styles/palette'
 import { flexCenter } from '@styles/styleUtils'
 import styled from 'styled-components'
+import { Swiper } from 'swiper/react'
+
+export const SkillsContainer = styled(Swiper)`
+  flex: 1 1 30%;
+  border: 1px solid #c6d0eb;
+  box-shadow: 0px 10px 29px rgba(198, 208, 235, 0.5);
+  border-radius: 20px;
+
+  ${onSmall} {
+    width: 100%;
+  }
+`
 
 export const Skills = styled.div`
   position: relative;
   padding: 4.2rem 4rem;
-  flex: 1 1 30%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #c6d0eb;
-  box-shadow: 0px 10px 29px rgba(198, 208, 235, 0.5);
-  border-radius: 20px;
 
   ${onSmall} {
     padding: 3.6rem 3.6rem 3.9rem;
