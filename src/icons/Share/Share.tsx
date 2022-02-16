@@ -1,9 +1,9 @@
 import React from 'react'
 import IconWrapper, { IconProps } from '../IconWrapper'
 
-const Share: React.FC<IconProps> = ({ width = 48, height = 48 }) => {
+const Share: React.FC<IconProps> = ({ width = 48, height = 48, onClick }) => {
   return (
-    <IconWrapper>
+    <IconWrapper onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}

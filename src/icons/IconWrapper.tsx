@@ -1,24 +1,26 @@
-import { PropsWithChildren } from 'react';
-import styled, { css } from 'styled-components';
+import { ButtonHTMLAttributes, PropsWithChildren } from 'react'
+import styled, { css } from 'styled-components'
 
 export interface IconProps {
-  width?: string | number;
-  height?: string | number;
-  padding?: string;
-  centerize?: boolean;
-  color?: string;
+  width?: string | number
+  height?: string | number
+  padding?: string
+  centerize?: boolean
+  color?: string
+  onClick?: () => {}
 }
 
 function IconWrapper({
   centerize = true,
   children,
+  onClick,
   ...props
 }: PropsWithChildren<IconProps>) {
   return (
-    <SvgIconWrapper centerize={centerize} {...props}>
+    <SvgIconWrapper onClick={onClick} centerize={centerize} {...props}>
       {children}
     </SvgIconWrapper>
-  );
+  )
 }
 
 const SvgIconWrapper = styled.div<IconProps>`
@@ -33,6 +35,6 @@ const SvgIconWrapper = styled.div<IconProps>`
       justify-content: center;
       align-items: center;
     `};
-`;
+`
 
-export default IconWrapper;
+export default IconWrapper

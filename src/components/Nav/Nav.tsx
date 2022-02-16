@@ -8,8 +8,16 @@ import * as S from './Nav.style'
 
 function Nav() {
   const { isSmall } = useScreenContext()
+
   const projectList = useRecoilValue(projectAtom)
   const skills = useRecoilValue(skillsAtom)
+
+  const copyURLtoClipboard = async () => {
+    await navigator.clipboard.writeText(window.location.href)
+
+    // TODO: add alert UI
+    alert('copied!')
+  }
 
   if (isSmall)
     return (
@@ -33,7 +41,7 @@ function Nav() {
             <span>Projects</span>
             <S.Badge>{projectList.length}</S.Badge>
           </S.NavItem>
-          <Share />
+          <Share onClick={copyURLtoClipboard} />
         </S.NavList>
       </S.NavWrapper>
     </S.NavContainer>
