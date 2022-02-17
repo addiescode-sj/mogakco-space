@@ -12,6 +12,8 @@ import Footer from '@components/Footer'
 import { useRecoilValue } from 'recoil'
 import userAtom from '@atoms/User'
 import useMainInitialLoad from './hooks/useMainData'
+import { useScreenContext } from '@hooks/useScreenContext'
+import NavItem from '@components/Nav/components/NavItem'
 
 function Main() {
   const router = useRouter()
@@ -21,6 +23,8 @@ function Main() {
   const name = uId ? uId[0].toUpperCase() + uId.slice(1) : ''
 
   const { githubProfile } = useRecoilValue(userAtom)
+
+  const { isSmall } = useScreenContext()
 
   useMainInitialLoad()
 
@@ -33,6 +37,7 @@ function Main() {
           <S.Chatter>
             Good {chatteringTime}!<br /> I am {name}.
           </S.Chatter>
+          {isSmall && <NavItem />}
           <Image src={'/Polygon8.png'} layout={'fill'} objectFit="cover" />
           <Wave />
         </S.Header>

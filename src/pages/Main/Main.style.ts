@@ -32,7 +32,7 @@ export const Chatter = styled.p`
   animation: toUpper 1.4s ease-in;
 
   ${onSmall} {
-    top: 8.7rem;
+    top: 6.4rem;
     font-size: 2.8rem;
     text-align: left;
     padding: 0 1.7rem;

@@ -31,30 +31,39 @@ export const NavList = styled.ul`
   display: flex;
   gap: 2.1rem;
   z-index: ${zIndexStyle.nav};
+
+  ${onSmall} {
+    position: absolute;
+    top: 14rem;
+    padding-left: 1.7rem;
+  }
 `
 
 export const NavItem = styled.li`
   ${flexCenter};
 
-  && {
-    text-align: center;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: bold;
-    line-height: 1.55;
-    z-index: ${zIndexStyle.nav};
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.55;
+  z-index: ${zIndexStyle.nav};
+
+  ${onSmall} {
+    font-size: 1.2rem;
   }
+
   span {
     margin-right: 0.7rem;
   }
 `
 
 export const Badge = styled.div`
-  border-radius: 50%;
+  ${flexCenter}
   width: 3.4rem;
   height: 3.4rem;
-  background: ${COLORS.MGK_BLUE};
-  text-align: center;
-  margin: auto 0;
   z-index: ${zIndexStyle.nav};
+  border-radius: 50%;
+  font-size: 2rem;
+  background: ${COLORS.MGK_BLUE};
 `
