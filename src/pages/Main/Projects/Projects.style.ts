@@ -10,7 +10,7 @@ export const ProjectsContainer = styled.section`
   position: relative;
 `
 
-export const Projects = styled(Swiper)`
+export const Projects = styled(Swiper)<{ isOnLastItem: boolean }>`
   width: 100%;
   height: 100%;
   padding: auto;
@@ -18,6 +18,19 @@ export const Projects = styled(Swiper)`
 
   .swiper-slide {
     flex-basis: calc((100% - 40px) / 3);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 60px;
+    height: 100%;
+    z-index: ${zIndexStyle.base};
+    background: ${({ isOnLastItem }) =>
+      isOnLastItem
+        ? 'none'
+        : 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(198, 208, 235, 0.3))'};
   }
 `
 
