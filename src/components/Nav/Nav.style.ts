@@ -9,7 +9,7 @@ export const NavContainer = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  z-index: ${zIndexStyle.nav};
+  z-index: ${zIndexStyle.base};
   padding: 5.7rem 1.7rem;
 
   ${onSmall} {
@@ -24,13 +24,13 @@ export const NavWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: ${zIndexStyle.nav};
+  z-index: ${zIndexStyle.base};
 `
 
 export const NavList = styled.ul`
   display: flex;
   gap: 2.1rem;
-  z-index: ${zIndexStyle.nav};
+  z-index: ${zIndexStyle.base};
 
   ${onSmall} {
     position: absolute;

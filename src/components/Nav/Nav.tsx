@@ -15,21 +15,26 @@ function Nav() {
 
   if (isSmall)
     return (
-      <S.NavContainer>
-        <S.NavWrapper>
-          <Logo />
-        </S.NavWrapper>
-      </S.NavContainer>
+      <>
+        <ConfirmModal alertText="Copied to clipboard!" />
+        <S.NavContainer>
+          <S.NavWrapper>
+            <Logo />
+          </S.NavWrapper>
+        </S.NavContainer>
+      </>
     )
 
   return (
-    <S.NavContainer>
+    <>
       <ConfirmModal alertText="Copied to clipboard!" />
-      <S.NavWrapper>
-        <Logo />
-        <NavItem />
-      </S.NavWrapper>
-    </S.NavContainer>
+      <S.NavContainer>
+        <S.NavWrapper>
+          <Logo />
+          <NavItem />
+        </S.NavWrapper>
+      </S.NavContainer>
+    </>
   )
 }
 

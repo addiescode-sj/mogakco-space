@@ -39,7 +39,7 @@ const WaveContainer = styled.div`
 
   ${onSmall} {
     top: calc(100% - 4rem + 2px);
-    z-index: ${zIndexStyle.nav};
+    z-index: ${zIndexStyle.base};
   }
 `
 

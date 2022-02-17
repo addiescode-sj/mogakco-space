@@ -6,6 +6,8 @@ import { zIndexStyle } from '@styles/zIndexStyle'
 import { COLORS } from '@styles/palette'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 import modalAtom from '@atoms/Modals'
+import { onSmall } from '@styles/mediaQuery'
+import { useScreenContext } from '@hooks/useScreenContext'
 
 interface Props {
   alertText: string
@@ -14,6 +16,8 @@ interface Props {
 }
 
 const ConfirmModal = ({ alertText, autoClose = true, onClose }: Props) => {
+  const { isSmall } = useScreenContext()
+
   const setDimdModal = useSetRecoilState(modalAtom)
   const { dimd } = useRecoilValue(modalAtom)
 
@@ -39,8 +43,8 @@ const ConfirmModal = ({ alertText, autoClose = true, onClose }: Props) => {
       <ConfirmModalContainer>
         <Lottie
           options={defaultOptions}
-          height={260}
-          width={260}
+          height={isSmall ? 75 : 260}
+          width={isSmall ? 75 : 260}
           style={{ margin: '2rem auto' }}
         ></Lottie>
         <AlertMessage>{alertText}</AlertMessage>
@@ -53,13 +57,20 @@ export const ConfirmModalContainer = styled.div`
   position: absolute;
   top: 37.6rem;
   left: calc((100% - 68.5rem) / 2);
-  width: 68.5rem;
+  min-width: 68.5rem;
   min-height: 401px;
-  z-index: ${zIndexStyle.modal + 1};
+  z-index: ${zIndexStyle.floating + 1};
   background: #ffffff;
   box-shadow: 0px 10px 29px rgba(198, 208, 235, 0.5);
   border-radius: 20px;
   text-align: center;
+
+  ${onSmall} {
+    top: 10rem;
+    left: calc((100% - 25.6rem) / 2);
+    min-width: 25.6rem;
+    min-height: 16.6rem;
+  }
 `
 
 export const AlertMessage = styled.p`
@@ -67,6 +78,10 @@ export const AlertMessage = styled.p`
   font-size: 3.5rem;
   font-weight: bold;
   color: ${COLORS.DK_BLUE};
+
+  ${onSmall} {
+    font-size: 1.4rem;
+  }
 `
 
 export default ConfirmModal
