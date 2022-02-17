@@ -36,10 +36,10 @@ const WaveContainer = styled.div`
   width: 100%;
   bottom: 0;
   text-align: center;
-  z-index: ${zIndexStyle.nav};
 
   ${onSmall} {
     top: calc(100% - 4rem + 2px);
+    z-index: ${zIndexStyle.nav};
   }
 `
 

@@ -1,9 +1,12 @@
+import modalAtom from '@atoms/Modals'
 import projectAtom from '@atoms/Projects'
 import skillsAtom from '@atoms/Skills'
+import ConfirmModal from '@components/Modals/Confirm'
 import { useScreenContext } from '@hooks/useScreenContext'
 import Logo from '@icons/Logo'
 import Share from '@icons/Share'
-import { useRecoilValue } from 'recoil'
+import { useState } from 'react'
+import { useRecoilValue, useSetRecoilState } from 'recoil'
 import * as S from './Nav.style'
 
 function Nav() {
@@ -12,11 +15,11 @@ function Nav() {
   const projectList = useRecoilValue(projectAtom)
   const skills = useRecoilValue(skillsAtom)
 
+  const setDimdModal = useSetRecoilState(modalAtom)
+
   const copyURLtoClipboard = async () => {
     await navigator.clipboard.writeText(window.location.href)
-
-    // TODO: add alert UI
-    alert('copied!')
+    setDimdModal((prev) => ({ ...prev, dimd: true }))
   }
 
   if (isSmall)
@@ -30,6 +33,7 @@ function Nav() {
 
   return (
     <S.NavContainer>
+      <ConfirmModal alertText="Copied to clipboard!" />
       <S.NavWrapper>
         <Logo />
         <S.NavList>

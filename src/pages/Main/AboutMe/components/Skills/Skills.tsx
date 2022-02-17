@@ -35,7 +35,7 @@ function Skills() {
       }}
     >
       {skillSet.map(({ skill, expertLevel }, idx) => (
-        <SwiperSlide>
+        <SwiperSlide key={idx}>
           <S.Skills>
             <S.SkillsTitle>
               <S.TitleText>Skills</S.TitleText>

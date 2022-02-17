@@ -3,8 +3,8 @@ import GlobalStyle from '@styles/GlobalStyle'
 import React from 'react'
 import { RecoilRoot } from 'recoil'
 import HolidayPortal from '@pages/Portals/HolidayPortal'
-import Nav from '@components/Nav'
 import { withScreenContext } from '@hooks/useScreenContext'
+import ModalContainer from '@components/Modals'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +12,7 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <HolidayPortal />
       <Component {...pageProps} />
+      <ModalContainer />
     </RecoilRoot>
   )
 }

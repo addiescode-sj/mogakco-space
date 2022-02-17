@@ -24,8 +24,8 @@ function Projects() {
       <SectionWithCards title="Projects" number={projectList.length} gap={'8.5rem'}>
         <S.Projects slidesPerView={'auto'} spaceBetween={20} onSwiper={setSlider}>
           {projectList.map((data, idx) => (
-            <SwiperSlide>
-              <ProjectCard key={idx} item={data} />
+            <SwiperSlide key={idx}>
+              <ProjectCard item={data} />
             </SwiperSlide>
           ))}
         </S.Projects>

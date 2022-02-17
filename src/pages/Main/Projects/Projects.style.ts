@@ -26,7 +26,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: ${zIndexStyle.base + 1};
+  z-index: ${zIndexStyle.base};
   top: 50%;
   width: 5.7rem;
   height: 10.3rem;
