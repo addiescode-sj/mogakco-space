@@ -1,6 +1,8 @@
 export interface User {
-  email: string | null | undefined;
-  nickname?: string;
+  email: string | null | undefined
+  name?: string
+  githubProfile?: string
+  linkedInProfile?: string
 }
 
-export type UserList = User[];
+export type UserList = User[]

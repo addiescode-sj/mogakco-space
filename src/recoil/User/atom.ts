@@ -5,7 +5,9 @@ const userAtom = atom<User>({
   key: 'user',
   default: {
     email: '',
-    nickname: '',
+    name: '',
+    githubProfile: '',
+    linkedInProfile: '',
   },
 })
 

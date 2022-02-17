@@ -1,14 +1,12 @@
+import SectionTitle from '@components/SectionTitle'
 import React from 'react'
-import { SectionTitle } from '../AboutMe.style'
 import Project from './components'
 import * as S from './Projects.style'
 
 function Projects() {
   return (
     <S.ProjectsContainer>
-      <SectionTitle>
-        Projects<span>3</span>
-      </SectionTitle>
+      <SectionTitle title="Projects" number={3} />
       <S.Projects>
         <Project />
         <Project />

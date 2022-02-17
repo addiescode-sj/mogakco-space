@@ -5,7 +5,7 @@ function Root() {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace('/main')
+    router.replace('/main/addie')
   }, [])
 
   return null

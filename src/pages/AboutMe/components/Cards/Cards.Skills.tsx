@@ -17,17 +17,17 @@ function SkillsCard() {
         <S.ContentTitle>General Skills</S.ContentTitle>
         <S.WorkSkilltWarp>
           {workSkill.map((text, idx) => (
-            <S.SkillListWrap>
-              <S.SkillListDot></S.SkillListDot>
-              <li key={idx}>{text}</li>
+            <S.SkillListWrap key={idx}>
+              <S.SkillListDot />
+              <li>{text}</li>
             </S.SkillListWrap>
           ))}
         </S.WorkSkilltWarp>
         <S.DevelopmentSkillWarp>
           {developmentSkill.map((text, idx) => (
-            <S.SkillListWrap>
-              <S.SkillListDot></S.SkillListDot>
-              <li key={idx}>{text}</li>
+            <S.SkillListWrap key={idx}>
+              <S.SkillListDot />
+              <li>{text}</li>
             </S.SkillListWrap>
           ))}
         </S.DevelopmentSkillWarp>

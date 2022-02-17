@@ -17,7 +17,7 @@ function Image({ alt, style, className, src, height }: ImageProps) {
 
   return (
     <picture onError={() => setError(true)}>
-      {!error && <source type="image/webp" srcSet={webpSrc} />}{' '}
+      {!error && <source type="image/webp" srcSet={webpSrc} />}
       <ImageWrapper style={style} className={className} src={src} height={height} alt={alt} />
     </picture>
   )

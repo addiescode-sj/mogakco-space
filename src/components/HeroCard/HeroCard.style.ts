@@ -85,7 +85,6 @@ export const Button = styled.button`
   color: #fff;
   font-size: 2.4rem;
   font-weight: bold;
-  border: 0;
   cursor: pointer;
 
   ${onSmall} {

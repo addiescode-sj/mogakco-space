@@ -4,10 +4,11 @@ import Image from 'next/image'
 import ContactCard from './components/Cards/Cards.Contact'
 import SkillsCard from './components/Cards/Cards.Skills'
 import IntroMe from './components/Cards/Cards.IntroMe'
-import Nav from '@pages/Nav'
+import Nav from '@components/Nav'
 import { useScreenContext } from '@hooks/useScreenContext'
-import Projects from './Projects'
+import Projects from '../Projects'
 import HeroCard from '@components/HeroCard'
+import { SectionTitle } from '@components/SectionTitle/SectionTitle.style'
 
 function AboutMe() {
   const { isSmall } = useScreenContext()
@@ -23,7 +24,7 @@ function AboutMe() {
       {!isSmall && <HeroCard />}
       <S.ProfileSection>
         {isSmall && <IntroMe />}
-        <S.SectionTitle>About Me</S.SectionTitle>
+        <SectionTitle>About Me</SectionTitle>
         <S.ProfileWarp>
           <ContactCard />
           <SkillsCard />
