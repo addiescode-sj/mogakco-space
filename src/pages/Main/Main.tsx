@@ -18,17 +18,24 @@ function Main() {
 
   useMainInitialLoad()
 
+  const timeMatchedColor: { [key: string]: string } = {
+    ['Morning']: '#66FFCC',
+    ['Afternoon']: '#FF9494',
+    ['Evening']: '#4B26FF',
+  }
+
   if (uId && githubProfile)
     return (
       <Layout>
-        <S.Header>
+        <S.Header
+          timeColor={greetingTime ? timeMatchedColor[greetingTime] : timeMatchedColor.Afternoon}
+        >
           <S.Gradient />
           <Nav />
           <S.Chatter>
             Good {greetingTime}!<br /> I am {name}.
           </S.Chatter>
           {isSmall && <NavItem />}
-          <Image src={'/Polygon8.png'} layout={'fill'} objectFit="cover" />
           <Wave />
         </S.Header>
         <S.Body>
