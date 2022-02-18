@@ -7,7 +7,7 @@ export const FooterContainer = styled.section`
   position: relative;
   display: flex;
   justify-content: center;
-  z-index: ${zIndexStyle.footer};
+  z-index: ${zIndexStyle.base};
   width: 100%;
   min-height: 63rem;
   background: #f1f3f5;
