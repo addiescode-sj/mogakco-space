@@ -10,7 +10,7 @@ export const NavContainer = styled.nav`
   left: 0;
   right: 0;
   z-index: ${zIndexStyle.base};
-  padding: 5.7rem 1.7rem;
+  padding: 5.2rem 22rem 0;
 
   ${onSmall} {
     padding: 2.8rem 0 0 1.7rem;
@@ -19,7 +19,6 @@ export const NavContainer = styled.nav`
 
 export const NavWrapper = styled.div`
   width: 100%;
-  max-width: 98rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
