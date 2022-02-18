@@ -25,23 +25,28 @@ export const skillSet: SkillSet = [
 export const projectList: Project[] = [
   {
     title: 'Mogakco Space',
-    date: '2022.1~',
-    description: 'Launched a beautiful online resume making service',
+    date: '2022.1~ Now working',
+    description: 'Building a beautiful online resume making service',
+    url: 'https://github.com/addiescode-sj/mogakco-space',
   },
   {
-    title: 'Mogakco Space',
-    date: '2022.1~',
-    description: 'Launched a beautiful online resume making service',
+    title: 'Seoul City - Gonganieum (Community Space)',
+    date: '2020.8.~2020.11',
+    description: 'Developed a official space rental & community platform for City of Seoul. ',
+    url: 'https://www.communityspace.kr/',
   },
   {
-    title: 'Mogakco Space',
-    date: '2022.1~',
-    description: 'Launched a beautiful online resume making service',
+    title: 'Maserati Korea - Clone Coding',
+    date: '2020.5',
+    description: 'Did a clone coding project at code bootcamp for practicing React.js ',
+    url: 'https://www.youtube.com/watch?v=yaO4jlIrlY8',
   },
   {
-    title: 'Mogakco Space',
-    date: '2022.1~',
-    description: 'Launched a beautiful online resume making service',
+    title: 'Gbox - Social app for present giving & sharing',
+    date: '2019.3~ 2019.4',
+    description:
+      'Implemented MVPs for Gbox App, learning front-end development while doing school project',
+    url: 'https://www.youtube.com/watch?v=cNeShlDPwpw',
   },
 ]
 

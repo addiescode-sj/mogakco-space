@@ -1,13 +1,14 @@
 import { Project } from '@atoms/Projects/model'
 import React from 'react'
 import * as S from './ProjectCard.style'
+import Link from 'next/link'
 
 interface Props {
   item: Project
 }
 
 function ProjectCard({ item }: Props) {
-  const { date, description, title, skills } = item
+  const { date, description, title, url, skills } = item
 
   return (
     <S.ProjectCard>
@@ -15,7 +16,11 @@ function ProjectCard({ item }: Props) {
       <S.ProjectDate>{date}</S.ProjectDate>
       <S.ProjectDesc>{description}</S.ProjectDesc>
       <S.Badges>{skills}</S.Badges>
-      <S.ProjectDetail>Learn more</S.ProjectDetail>
+      <Link href={url} passHref>
+        <a target="_blank">
+          <S.ProjectDetail>Learn more</S.ProjectDetail>
+        </a>
+      </Link>
     </S.ProjectCard>
   )
 }
