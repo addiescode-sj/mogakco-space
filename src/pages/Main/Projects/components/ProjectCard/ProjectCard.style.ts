@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const ProjectCard = styled.div`
   min-width: 32rem;
-  min-height: 40rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   padding: 4rem;
