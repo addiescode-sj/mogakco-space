@@ -32,7 +32,7 @@ export const projectList: Project[] = [
   {
     title: 'Seoul City - Gonganieum (Community Space)',
     date: '2020.8.~2020.11',
-    description: 'Developed a official space rental & community platform for City of Seoul. ',
+    description: 'Developed a official space rental & community platform for city of Seoul. ',
     url: 'https://www.communityspace.kr/',
   },
   {
