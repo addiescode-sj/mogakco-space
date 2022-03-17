@@ -5,14 +5,18 @@ import { RecoilRoot } from 'recoil'
 import HolidayPortal from '@pages/Portals/HolidayPortal'
 import { withScreenContext } from '@hooks/useScreenContext'
 import ModalContainer from '@components/Modals'
+import { SWRConfig } from 'swr'
+import fetcher from 'src/factory/apiManager'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
-      <GlobalStyle />
-      <HolidayPortal />
-      <Component {...pageProps} />
-      <ModalContainer />
+      <SWRConfig value={{ fetcher }}>
+        <GlobalStyle />
+        <HolidayPortal />
+        <Component {...pageProps} />
+        <ModalContainer />
+      </SWRConfig>
     </RecoilRoot>
   )
 }
