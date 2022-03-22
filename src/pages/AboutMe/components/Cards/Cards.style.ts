@@ -17,9 +17,14 @@ export const IntroduceMeWrap = styled.div`
 export const Title = styled.p`
   color: #4f83f9;
 `
-
-export const Description = styled.div`
+export const DevelopScr = styled.div`
+  width: 100%;
   color: white;
+
+  pre {
+    word-break: keep-all;
+  }
+
   ${onSmall} {
     color: #205284;
   }

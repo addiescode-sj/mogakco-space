@@ -9,6 +9,7 @@ import { TextProps } from '../Text/Text'
 function TextWithScrollEffect({
   size,
   weight,
+  color,
   children,
 }: PropsWithChildren<Omit<TextProps, 'activate'>>) {
   const [activated, isActivated] = useState(false)
@@ -34,7 +35,7 @@ function TextWithScrollEffect({
   }, [])
 
   return (
-    <Text ref={textRef} size={size} weight={weight} activate={activated}>
+    <Text ref={textRef} size={size} weight={weight} color={color} activate={activated}>
       {children}
     </Text>
   )
