@@ -1,6 +1,6 @@
 ## Design System in Figma
 
-[Browse](https://www.figma.com/file/fsJUlp1iHCculh2LMxVXqd/Mogakco_Space?node-id=3%3A468)
+[Browse](https://www.figma.com/file/UdolIWURdjgVxKdBEaFyzm/Mogakco-Space_Shared?node-id=0%3A1&t=NVsz9heBnQxtQhDm-1)
 
 ## Links
 https://mogakco-space.netlify.app
