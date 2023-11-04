@@ -1,14 +1,8 @@
-import modalAtom from '@atoms/Modals'
-import projectAtom from '@atoms/Projects'
-import skillsAtom from '@atoms/Skills'
 import ConfirmModal from '@components/Modals/Confirm'
 import { useScreenContext } from '@hooks/useScreenContext'
 import Logo from '@icons/Logo'
-import Share from '@icons/Share'
-import { useState } from 'react'
-import { useRecoilValue, useSetRecoilState } from 'recoil'
-import NavItem from './components/NavItem'
 import * as S from './Nav.style'
+import NavItem from './components/NavItem'
 
 function Nav() {
   const { isSmall } = useScreenContext()

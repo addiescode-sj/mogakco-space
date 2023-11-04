@@ -50,10 +50,11 @@ export const Chatter = styled.p`
   }
 `
 
-export const Header = styled.header`
+export const Header = styled.header<{ timeColor: string }>`
   position: relative;
   width: 100%;
   height: 45rem;
+  background: ${({ timeColor }) => timeColor};
   ${onSmall} {
     height: 22.3rem;
   }

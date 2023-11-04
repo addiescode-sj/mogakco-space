@@ -1,8 +1,8 @@
-import { onSmall } from '@styles/mediaQuery'
+import { onDesktopFullscreen, onSmall } from '@styles/mediaQuery'
 import { zIndexStyle } from '@styles/zIndexStyle'
 import styled from 'styled-components'
-import { Swiper } from 'swiper/react'
 import 'swiper/css'
+import { Swiper } from 'swiper/react'
 
 export const ProjectsContainer = styled.section`
   width: 100%;
@@ -17,20 +17,29 @@ export const Projects = styled(Swiper)<{ isOnLastItem: boolean }>`
   display: flex;
 
   .swiper-slide {
+    && {
+      overflow: hidden !important;
+    }
     flex-basis: calc((100% - 40px) / 3);
   }
 
-  &::after {
-    position: absolute;
-    content: '';
-    right: 0;
-    width: 60px;
-    height: 100%;
-    z-index: ${zIndexStyle.base};
-    background: ${({ isOnLastItem }) =>
-      isOnLastItem
-        ? 'none'
-        : 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(198, 208, 235, 0.3))'};
+  &:last-child {
+    ::after {
+      position: absolute;
+      content: '';
+      right: 0;
+      width: 60px;
+      height: 100%;
+      z-index: ${zIndexStyle.base};
+      background: ${({ isOnLastItem }) =>
+        isOnLastItem
+          ? 'none'
+          : 'linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(198, 208, 235, 0.3))'};
+
+      ${onDesktopFullscreen} {
+        border-radius: 20px;
+      }
+    }
   }
 `
 
