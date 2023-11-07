@@ -4,7 +4,8 @@ import { onSmall } from '@styles/mediaQuery'
 
 export interface TextProps {
   size: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  weight: 'regular' | 'bold' | number
+  weight: 'regular' | 'bold'
+  color?: string
   activate: boolean
   children: React.ReactNode
 }
@@ -18,7 +19,7 @@ const textStyleProps = {
 } as const
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>(function Text(
-  { size, children, ...props }: PropsWithChildren<TextProps>,
+  { size, children, color = 'white', ...props }: PropsWithChildren<TextProps>,
   ref
 ) {
   return (
@@ -31,9 +32,11 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>(function Text(
 export const BodyText = styled.p<{
   size: string
   weight: 'regular' | 'bold' | number
+  color?: string
   activate: boolean
 }>`
   width: 100%;
+  color: ${({ color }) => color};
 
   ${({ size, weight }) => css`
     font-size: ${size};
@@ -43,11 +46,9 @@ export const BodyText = styled.p<{
   ${({ activate }) =>
     activate
       ? css`
-          color: #fff;
           opacity: 1;
         `
       : css`
-          color: #f5f5f7;
           opacity: 0.2;
         `}
         
